@@ -23,4 +23,4 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['togglefullscreenmode'] = 'Toggle fullscreen content mode.  (Ctrl + Alt + b)';
-$string['pluginname'] = 'Full screen toggle button';
+$string['pluginname'] = 'Fullscreen toggle button';
