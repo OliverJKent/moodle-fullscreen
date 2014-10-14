@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Function that requiers the javascript for the fullscreen toggle button
+ * Function that requires the javascript for the fullscreen toggle button
  *
  * @package    local_fullscreen
  * @copyright  2014 onwards - University of Nottingham <www.nottingham.ac.uk>
