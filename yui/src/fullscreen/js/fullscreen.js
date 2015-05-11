@@ -72,9 +72,8 @@ Y.extend(FULLSCREEN, Y.Base, {
      * @returns {Object}
      */
     createFullscreenToggle: function() {
-        return Y.Node.create('<div id="fullscreen" title="'
-                + M.str.local_fullscreen.togglefullscreenmode
-                + '" class="' + this.icon_classes + '"></div>');
+        return Y.Node.create('<div id="fullscreenpadding"><div id="fullscreen" title="' + M.str.theme_nottingham.togglefullscreenmode
+                + '" class="' + this.icon_classes + '"></div></div>');
     },
     /**
      * Create the node object for the floating fullscreen toggle bubble
@@ -116,13 +115,13 @@ Y.extend(FULLSCREEN, Y.Base, {
         if (this.fullscreenmode === true) {
             this.fullscreenmode = false;
             this.bodynode.removeClass('fullscreenmode');
-            this.fullscreentoggle.removeClass('restore_fullscreen');
+            this.fullscreentoggle.one('#fullscreen').removeClass('restore_fullscreen');
             this.floatingfullscreentoggle.removeClass('restore_fullscreen');
 
         } else {
             this.fullscreenmode = true;
             this.bodynode.addClass('fullscreenmode');
-            this.fullscreentoggle.addClass('restore_fullscreen');
+            this.fullscreentoggle.one('#fullscreen').addClass('restore_fullscreen');
             this.floatingfullscreentoggle.addClass('restore_fullscreen');
         }
         M.util.set_user_preference('fullscreenmode', this.fullscreenmode);
