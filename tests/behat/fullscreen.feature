@@ -32,4 +32,3 @@ Scenario: A user is able to view and use the Fullscreen button
     Then ".fullscreenmode" "css_element" should exist in the "body" "css_element"
     Given I click on "#fullscreen" "css_element" in the "#region-main" "css_element"
     Then ".fullscreenmode" "css_element" should not exist in the "body" "css_element"
-#region-main
