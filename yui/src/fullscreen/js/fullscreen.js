@@ -72,8 +72,9 @@ Y.extend(FULLSCREEN, Y.Base, {
      * @returns {Object}
      */
     createFullscreenToggle: function() {
-        return Y.Node.create('<div id="fullscreenpadding"><div id="fullscreen" title="' + M.str.theme_nottingham.togglefullscreenmode
-                + '" class="' + this.icon_classes + '"></div></div>');
+        return Y.Node.create('<div id="fullscreenpadding"><div id="fullscreen" title="' +
+                M.str.local_fullscreen.togglefullscreenmode +
+                '" class="' + this.icon_classes + '"></div></div>');
     },
     /**
      * Create the node object for the floating fullscreen toggle bubble
@@ -81,9 +82,9 @@ Y.extend(FULLSCREEN, Y.Base, {
      * @returns {Object}
      */
     createFloatingFullscreenToggle: function() {
-        return Y.Node.create('<div id="fullscreenfloat" title="'
-                + M.str.local_fullscreen.togglefullscreenmode
-                + '" class="' + this.icon_classes + '"></div>');
+        return Y.Node.create('<div id="fullscreenfloat" title="' +
+                M.str.local_fullscreen.togglefullscreenmode +
+                '" class="' + this.icon_classes + '"></div>');
     },
     /**
      * Render the floating full screen toggle bubble if the window is scrolled down far enough

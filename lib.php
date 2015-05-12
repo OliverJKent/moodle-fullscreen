@@ -15,6 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * File containing function that requires the javascript for the fullscreen toggle button
+ *
+ * @package    local_fullscreen
+ * @copyright  2014 onwards - University of Nottingham <www.nottingham.ac.uk>
+ * @author     Barry Oosthuizen <barry.oosthuizen@nottingham.ac.uk>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/**
  * Function that requires the javascript for the fullscreen toggle button
  *
  * @package    local_fullscreen
@@ -22,13 +31,12 @@
  * @author     Barry Oosthuizen <barry.oosthuizen@nottingham.ac.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * 
- * @global moodle_page $PAGE
  * @param navigation $navigation
  * @return void
  */
 function local_fullscreen_extends_navigation($navigation) {
     global $PAGE;
-    if($PAGE->pagelayout === 'login'
+    if ($PAGE->pagelayout === 'login'
             || $PAGE->pagelayout === 'mydashboard'
             || $PAGE->pagelayout === 'embedded'
             || $PAGE->pagelayout === 'popup'

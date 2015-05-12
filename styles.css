@@ -147,6 +147,11 @@ div#fullscreenfloat.fullscreen.restore_fullscreen {
     box-shadow: 0 0 5px rgba(0,0,0,0.28);
 }
 
+div#fullscreenfloat:hover,
+div#fullscreen:hover {
+    cursor: pointer;
+}
+
 div#fullscreenfloat.fullscreen {
     z-index: 10000;
     padding:20px 20px;
