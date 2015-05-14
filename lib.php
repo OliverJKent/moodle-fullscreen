@@ -15,31 +15,26 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Function that requires the javascript for the fullscreen toggle button
+ * File containing code that requires the javascript for the fullscreen toggle button
  *
  * @package    local_fullscreen
  * @copyright  2014 onwards - University of Nottingham <www.nottingham.ac.uk>
  * @author     Barry Oosthuizen <barry.oosthuizen@nottingham.ac.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * 
- * @global moodle_page $PAGE
- * @param navigation $navigation
- * @return void
  */
-function local_fullscreen_extends_navigation($navigation) {
-    global $PAGE;
-    if($PAGE->pagelayout === 'login'
-            || $PAGE->pagelayout === 'mydashboard'
-            || $PAGE->pagelayout === 'embedded'
-            || $PAGE->pagelayout === 'popup'
-            || $PAGE->pagelayout === 'base'
-            || $PAGE->pagelayout === 'redirect'
-            || $PAGE->pagelayout === 'frametop') {
-        return;
-    }
-    $fullscreen = get_user_preferences('fullscreenmode', false);
-    $PAGE->requires->yui_module('moodle-local_fullscreen-fullscreen', 'M.local_fullscreen.init_fullscreen',
-            array(array('fullscreenmode' => $fullscreen)), null, true);
-    $PAGE->requires->string_for_js('togglefullscreenmode', 'local_fullscreen');
-    user_preference_allow_ajax_update('fullscreenmode', PARAM_BOOL);
+
+global $PAGE;
+if ($PAGE->pagelayout === 'login'
+        || $PAGE->pagelayout === 'mydashboard'
+        || $PAGE->pagelayout === 'embedded'
+        || $PAGE->pagelayout === 'popup'
+        || $PAGE->pagelayout === 'base'
+        || $PAGE->pagelayout === 'redirect'
+        || $PAGE->pagelayout === 'frametop') {
+    return;
 }
+$fullscreen = get_user_preferences('fullscreenmode', false);
+$PAGE->requires->yui_module('moodle-local_fullscreen-fullscreen', 'M.local_fullscreen.init_fullscreen',
+        array(array('fullscreenmode' => $fullscreen)), null, true);
+$PAGE->requires->string_for_js('togglefullscreenmode', 'local_fullscreen');
+user_preference_allow_ajax_update('fullscreenmode', PARAM_BOOL);

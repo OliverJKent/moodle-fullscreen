@@ -2,6 +2,11 @@
 * Full Screen mode and full sceen trigger icons
 */
 
+#fullscreenpadding {
+    padding-left:20px;
+    float: right;
+}
+
 #region-main div#fullscreen.fullscreen {
    height: 20px;
    width: 20px;
@@ -9,6 +14,7 @@
    background-size: 20px 20px;
    position: relative;
    top: 5px;
+   z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -31,70 +37,8 @@
         float:none;
         clear:both;
     }
-    .fullscreenmode .page-navbar-inner {
-        padding:10px 14px 15px;
-    }
-    .fullscreenmode .breadcrumb-button,
-    .fullscreenmode .breadcrumb-button .singlebutton,
-    .fullscreenmode .breadcrumb-button .singlebutton div,
-    .fullscreenmode .breadcrumb-button input[type="submit"] {
-        clear:both;
-        float:none;
-        width:100%;
-        margin:5px 0 0;
-        font-size:15px;
-    }
-    .fullscreenmode .breadcrumb-nav {
-        line-height:15px;
-    }
-    .fullscreenmode .breadcrumb-nav li {
-        display: inline-block;
-        max-width: 100px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 12px;
-        margin-left: 3px;
-        color: #0070a8;
-    }
-    .fullscreenmode .formsettingheading .singlebutton {
-        float:none;
-        margin:15px auto 20px;
-    }
-    .fullscreenmode #footer-expandable {
-        position:relative;
-        bottom:inherit;
-    }
-    .fullscreenmode #page-footer,
-    .fullscreenmode .pagelayout-login #page-footer {
-        position:relative;
-        text-align: center;
-    }
     .fullscreenmode .push {
         display:none;
-    }
-    .fullscreenmode .pagelayout-login #page-footer {
-        height:inherit;
-        margin:60px 0 0;
-    }
-    .fullscreenmode #page-footer ul,
-    .fullscreenmode #page-footer li {
-        float: none;
-        text-align: center;
-        display: inline-block;
-    }
-    .fullscreenmode #page-footer .copyright {
-        float: none;
-        display: block;
-        margin: 20px 0 0;
-    }
-    .fullscreenmode #faculty-header,
-    .fullscreenmode #faculty-header h3 {
-        padding-top:5px;
-        padding-bottom:5px;
-        height: inherit;
-        line-height:20px;
-        background-position: 0 3px;
     }
     .fullscreenmode #region-main {
       margin-bottom: 20px;
@@ -121,43 +65,9 @@
         width: 100%;
     }
 
-    .fullscreenmode.form-item .form-label,
-    .fullscreenmode .mform .fitem div.fitemtitle,
-    .fullscreenmode .userprofile dl.list dt,
-    .fullscreenmode .form-horizontal .control-label{
-        width:180px
-    }
-    .fullscreenmode.form-item .form-setting,
-    .fullscreenmode .form-item .form-description,
-    .fullscreenmode .mform .fitem .felement,
-    .fullscreenmode #page-mod-forum-search .c1,
-    .fullscreenmode .mform .fdescription.required,
-    .fullscreenmode .userprofile dl.list dd,
-    .fullscreenmode .form-horizontal .controls{
-        margin-left:0px
-    }
     .fullscreenmode #block-region-side-post,
     .fullscreenmode #block-region-side-pre {
         display: none;
-    }
-    .fullscreenmode .navbar-inner {
-        background: none;
-        border: none;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .fullscreenmode .navbar-lower {
-        max-width: 100%;
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 44px 20px 0;
     }
     .fullscreenmode .container-fluid {
         max-width: 100%;
@@ -179,6 +89,28 @@
 @media (max-width: 1333px) {
     .fullscreenmode .container-fluid {
         width: 96%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscussion {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    #page-mod-forum-discuss .discussioncontrols .discussioncontrol select {
+        margin-bottom: 0;
+    }
+
+    #page-mod-forum-discuss .discussioncontrols .discussioncontrol {
+        display: inline-block;
+        float: none;
+        width: auto;
+        margin: 0 3px .5em;
+    }
+
+    #page-mod-forum-discuss .discussioncontrols {
+        text-align: right;
     }
 }
 
@@ -213,6 +145,11 @@ div#fullscreenfloat.fullscreen.restore_fullscreen {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.28);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.28);
     box-shadow: 0 0 5px rgba(0,0,0,0.28);
+}
+
+div#fullscreenfloat:hover,
+div#fullscreen:hover {
+    cursor: pointer;
 }
 
 div#fullscreenfloat.fullscreen {
