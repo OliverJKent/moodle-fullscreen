@@ -24,7 +24,8 @@
  */
 
 global $PAGE;
-if ($PAGE->pagelayout === 'login'
+if (CLI_SCRIPT || AJAX_SCRIPT
+        || $PAGE->pagelayout === 'login'
         || $PAGE->pagelayout === 'mydashboard'
         || $PAGE->pagelayout === 'embedded'
         || $PAGE->pagelayout === 'popup'
