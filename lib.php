@@ -26,10 +26,8 @@
 global $PAGE;
 if (CLI_SCRIPT || AJAX_SCRIPT
         || $PAGE->pagelayout === 'login'
-        || $PAGE->pagelayout === 'mydashboard'
         || $PAGE->pagelayout === 'embedded'
         || $PAGE->pagelayout === 'popup'
-        || $PAGE->pagelayout === 'base'
         || $PAGE->pagelayout === 'redirect'
         || $PAGE->pagelayout === 'frametop') {
     return;
