@@ -26,7 +26,6 @@
 
 require_once(__DIR__ . '/../../../../lib/behat/behat_base.php');
 
-use Behat\Behat\Context\Step\Given as Given;
 
 /**
  * Fullscreen local plugin related steps definitions.
