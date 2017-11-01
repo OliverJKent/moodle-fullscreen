@@ -155,28 +155,6 @@ div.fullscreen,
     }
 }
 
-@media (min-width: 1200px) {
-    #page-mod-forum-discuss.fullscreenmode .discussioncontrols .discussioncontrol.movediscussion {
-        padding-right: 0;
-        margin-right: 0;
-    }
-
-    #page-mod-forum-discuss.fullscreenmode .discussioncontrols .discussioncontrol select {
-        margin-bottom: 0;
-    }
-
-    #page-mod-forum-discuss.fullscreenmode .discussioncontrols .discussioncontrol {
-        display: inline-block;
-        float: none;
-        width: auto;
-        margin: 0 3px .5em;
-    }
-
-    #page-mod-forum-discuss.fullscreenmode .discussioncontrols {
-        text-align: right;
-    }
-}
-
 @media (max-width: 1005px) {
     .fullscreenmode .container-fluid {
         width: 95%;
