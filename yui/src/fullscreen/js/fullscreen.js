@@ -37,7 +37,11 @@ Y.extend(FULLSCREEN, Y.Base, {
      */
     initializer: function(config) { // 'config' contains the parameter values.
         Y.log('Fullscreen button loading', 'debug', FULLSCREENNAME);
-        this.mainnode = Y.one('#region-main'); // Get the main node.
+        this.mainnode = Y.one('#region-main .card-block'); // Get the main node for Boost based themes.
+        if (!this.mainnode) {
+            this.mainnode = Y.one('#region-main'); // Get the main node for clean based themes.
+        }
+        Y.log(this.mainnode, 'debug', FULLSCREENNAME);
         this.fullscreenmode = config.fullscreenmode; // Get the initial screen state from the database.
         this.bodynode = Y.one('body'); // The body node.
         this.icon_classes = 'fullscreen'; // Full screen icon to be displayed by default.
