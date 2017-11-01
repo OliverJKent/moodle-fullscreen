@@ -102,9 +102,10 @@ div.fullscreen,
 
     .fullscreenmode #region-main,
     .fullscreenmode #region-main.has-blocks,
-    .fullscreenmode.jsenabled.has_dock.has_dock_left_vertical.docked-region-side-post #region-main,
-    .fullscreenmode.empty-region-side-post.used-region-side-pre #region-main,
-    .fullscreenmode.jsenabled.docked-region-side-post.used-region-side-pre #region-main {
+    .fullscreenmode #region-main.span8.pull-right,
+    .fullscreenmode.jsenabled.has_dock.has_dock_left_vertical.docked-region-side-post #region-main.span8.pull-right,
+    .fullscreenmode.empty-region-side-post.used-region-side-pre #region-main.span8,
+    .fullscreenmode.jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8 {
         width: 100%;
     }
 
