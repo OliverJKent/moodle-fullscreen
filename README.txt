@@ -11,7 +11,7 @@ PURPOSE
 The 'Fullscreen toggle button' plugin allows a user to toggle fullscreen mode (no side blocks) on and off.
 The current screen mode is stored in user preferences which means the screen mode will persist until it is toggled again.
 The button appears on all pages except "My home", login, embedded, popup, frametop, redirect and base page layouts.
-This plugin has been tested with the bootstrap base and clean theme.
+This plugin has been tested with the bootstrap base and clean theme. It has experimental support for Boost.
 
 INSTALLATION
 ==========
