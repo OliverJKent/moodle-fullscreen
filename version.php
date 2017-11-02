@@ -26,8 +26,8 @@ if (!defined('MOODLE_INTERNAL')) {
     die('Direct access to this script is forbidden.');
 }
 
-$plugin->version = 2017011800;
+$plugin->version = 2017110100;
 $plugin->component = 'local_fullscreen';
-$plugin->release = '2.6.4';
+$plugin->release = '2.6.5 (2017-11-01)';
 $plugin->requires = 2016120500;
 $plugin->maturity = MATURITY_STABLE;
