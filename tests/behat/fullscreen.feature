@@ -25,8 +25,7 @@ Feature: Theme elements appear as expected
     Scenario: A user is able to view and use the full screen button in Clean
         Given I log in as "student1"
         And I use the clean theme
-        And I am on homepage
-        Given I follow "C1"
+        And I am on "C1" course homepage
         Then "#fullscreen" "css_element" should exist in the "#region-main" "css_element"
         Given I click on "#fullscreen" "css_element" in the "#region-main" "css_element"
         Then ".fullscreenmode" "css_element" should exist in the "body" "css_element"
@@ -36,8 +35,7 @@ Feature: Theme elements appear as expected
     @javascript
     Scenario: A user is able to view and use the full screen button in Boost
         Given I log in as "student1"
-        And I am on homepage
-        Given I follow "C1"
+        And I am on "C1" course homepage
         Then "#fullscreen" "css_element" should exist in the "#region-main" "css_element"
         Given I click on "#fullscreen" "css_element" in the "#region-main" "css_element"
         Then ".fullscreenmode" "css_element" should exist in the "body" "css_element"
