@@ -88,7 +88,7 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
             if (fullscreen == true) {
                 $('body').addClass(CLASSES.toggle);
             }
-            return Templates.render(TEMPLATES.button, []).then(addButton);
+            Templates.render(TEMPLATES.button, []).then(addButton);
         };
 
         /**
