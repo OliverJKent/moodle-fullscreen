@@ -14,8 +14,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A javascript module that allows tutorial booking slots to
- * be moved by dragging and dropping them.
+ * A javascript module that adds the fullscreen button to a page.
  *
  * @module     local_fullscreen/button
  * @package    local_fullscreen
@@ -44,6 +43,7 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
         };
 
         var TEMPLATES = {
+            /** The name of the template that renders the fullscreen button. */
             button: 'local_fullscreen/button'
         };
 
