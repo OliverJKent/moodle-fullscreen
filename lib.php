@@ -43,8 +43,22 @@ function local_fullscreen_before_footer() {
         return;
     }
     $fullscreen = get_user_preferences('fullscreenmode', false);
-    $PAGE->requires->yui_module('moodle-local_fullscreen-fullscreen', 'M.local_fullscreen.init_fullscreen',
-            array(array('fullscreenmode' => $fullscreen)), null, true);
-    $PAGE->requires->string_for_js('togglefullscreenmode', 'local_fullscreen');
+    $PAGE->requires->js_call_amd('local_fullscreen/button', 'init', ['fullscreen' => $fullscreen]);
     user_preference_allow_ajax_update('fullscreenmode', PARAM_BOOL);
+}
+
+/**
+ * Returns the name of the user preferences as well as the details this plugin uses.
+ *
+ * @return array
+ */
+function local_fullscreen_user_preferences() {
+    $preferences = array();
+    $preferences['fullscreenmode'] = array(
+        'type' => PARAM_BOOL,
+        'null' => NULL_NOT_ALLOWED,
+        'default' => false,
+    );
+
+    return $preferences;
 }
