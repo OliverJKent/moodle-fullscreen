@@ -126,11 +126,9 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
          */
         var scrollHandler = function() {
             if (window.pageYOffset > 205) {
-                $(SELECTORS.button).removeClass(CLASSES.fixed);
                 $(SELECTORS.button).addClass(CLASSES.float);
             } else {
                 $(SELECTORS.button).removeClass(CLASSES.float);
-                $(SELECTORS.button).addClass(CLASSES.fixed);
             }
         };
 

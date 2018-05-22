@@ -28,11 +28,14 @@
         box-shadow: 0 0 5px rgba(0,0,0,0.28);
         cursor: pointer;
         display: block;
+        float: right;
         padding: 20px;
+        position: relative;
         -webkit-transition: 0.25s;
         -moz-transition: 0.25s;
         -o-transition: 0.25s;
         transition: 0.25s;
+        z-index: 10;
     }
 
     .local-fullscreen:hover {
@@ -47,16 +50,10 @@
         background: url([[pix:local_fullscreen|fullscreen_collapse]]) no-repeat center center;
     }
 
-    /** When the page is not scrolled. */
-    .local-fullscreen.fixed {
-       float: right;
-       position: relative;
-       z-index: 10;
-    }
-
     /** When the page is scrolled down */
     .local-fullscreen.float {
         background-color: #F9FAFC;
+        float: none;
         filter: alpha(opacity=80);
         opacity: 1;
         position:fixed;
