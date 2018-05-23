@@ -3,22 +3,24 @@
 */
 
 /* By default do not display the full screen button. */
-div.fullscreen,
-#fullscreenpadding {
+.local-fullscreen,
+.local-fullscreen-padding {
     display: none;
 }
 
 /* Full screen mode should have no effect below this resolution. */
 @media (min-width: 769px) {
-    /* Wrapper for the button containing the fixed position button. */
-    #fullscreenpadding {
+    .local-fullscreen-padding {
         display: block;
         float: right;
         padding-left: 20px;
     }
 
-    /* Common settings to all versions of the button. */
-    div.fullscreen {
+    .pagelayout-incourse .local-fullscreen-padding {
+        padding-right: 3.5rem;
+    }
+
+    .local-fullscreen {
         background: url([[pix:local_fullscreen|fullscreen]]) no-repeat center center;
         background-color: #FEFEFE;
         background-size: 20px;
@@ -30,36 +32,32 @@ div.fullscreen,
         box-shadow: 0 0 5px rgba(0,0,0,0.28);
         cursor: pointer;
         display: block;
+        float: right;
         padding: 20px;
+        position: relative;
         -webkit-transition: 0.25s;
         -moz-transition: 0.25s;
         -o-transition: 0.25s;
         transition: 0.25s;
+        z-index: 10;
     }
 
-    /* The button during full screen mode. */
-    div.fullscreen.restore_fullscreen {
-        background: url([[pix:local_fullscreen|fullscreen_collapse]]) no-repeat center center;
-    }
-
-    /* The button on mouse over. */
-    div.fullscreen:hover {
+    .local-fullscreen:hover {
         background-color: #ffffff;
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,1);
         -moz-box-shadow: 0 0 5px rgba(0,0,0,1);
         box-shadow: 0 0 5px rgba(0,0,0,1);
     }
 
-    /* The non hovering button. */
-    #region-main div#fullscreen {
-       float: right;
-       position: relative;
-       z-index: 10;
+    /** When in fullscreen mode. */
+    .fullscreenmode .local-fullscreen {
+        background: url([[pix:local_fullscreen|fullscreen_collapse]]) no-repeat center center;
     }
 
-    /* The hovering button. */
-    div#fullscreenfloat {
+    /** When the page is scrolled down */
+    .local-fullscreen.float {
         background-color: #F9FAFC;
+        float: none;
         filter: alpha(opacity=80);
         opacity: 1;
         position:fixed;

@@ -25,27 +25,41 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-global $PAGE;
+/**
+ * Adds the full screen button to the page.
+ *
+ * @see https://docs.moodle.org/dev/Output_callbacks#before_footer
+ * 
+ * @return void
+ */
+function local_fullscreen_before_footer() {
+    global $PAGE;
+    if (CLI_SCRIPT || AJAX_SCRIPT
+            || $PAGE->pagelayout === 'login'
+            || $PAGE->pagelayout === 'embedded'
+            || $PAGE->pagelayout === 'popup'
+            || $PAGE->pagelayout === 'redirect'
+            || $PAGE->pagelayout === 'frametop'
+            || $PAGE->pagelayout === 'maintenance') {
+        return;
+    }
+    $fullscreen = get_user_preferences('fullscreenmode', false);
+    $PAGE->requires->js_call_amd('local_fullscreen/button', 'init', ['fullscreen' => $fullscreen]);
+    user_preference_allow_ajax_update('fullscreenmode', PARAM_BOOL);
+}
 
 /**
- * Add a call back to extend the global navigation. This will cause the page to be loaded.
+ * Returns the name of the user preferences as well as the details this plugin uses.
  *
- * @param global_navigation $navigation
+ * @return array
  */
-function local_fullscreen_extend_navigation(global_navigation $navigation) {
-    // Intentionally blank.
-}
+function local_fullscreen_user_preferences() {
+    $preferences = array();
+    $preferences['fullscreenmode'] = array(
+        'type' => PARAM_BOOL,
+        'null' => NULL_NOT_ALLOWED,
+        'default' => false,
+    );
 
-if (CLI_SCRIPT || AJAX_SCRIPT
-        || $PAGE->pagelayout === 'login'
-        || $PAGE->pagelayout === 'embedded'
-        || $PAGE->pagelayout === 'popup'
-        || $PAGE->pagelayout === 'redirect'
-        || $PAGE->pagelayout === 'frametop') {
-    return;
+    return $preferences;
 }
-$fullscreen = get_user_preferences('fullscreenmode', false);
-$PAGE->requires->yui_module('moodle-local_fullscreen-fullscreen', 'M.local_fullscreen.init_fullscreen',
-        array(array('fullscreenmode' => $fullscreen)), null, true);
-$PAGE->requires->string_for_js('togglefullscreenmode', 'local_fullscreen');
-user_preference_allow_ajax_update('fullscreenmode', PARAM_BOOL);
