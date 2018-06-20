@@ -16,7 +16,8 @@
         padding-left: 20px;
     }
 
-    .pagelayout-incourse .local-fullscreen-padding {
+    .pagelayout-incourse .local-fullscreen-padding,
+    .pagelayout-coursecategory .local-fullscreen-padding {
         padding-right: 3.5rem;
     }
 
