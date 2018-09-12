@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
  * Adds the full screen button to the page.
  *
  * @see https://docs.moodle.org/dev/Output_callbacks#before_footer
- * 
+ *
  * @return void
  */
 function local_fullscreen_before_footer() {

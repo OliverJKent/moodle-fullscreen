@@ -80,7 +80,8 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
         /**
          * Adds the full screen button to the page.
          *
-         * @returns {undefined}
+         * @param {boolean} Should the button will be initialised in fullscreen mode.
+         * @returns {Promise}
          */
         var init = function(fullscreen) {
             log.debug('Adding fullscreen button to the page (fullscreen=' + fullscreen + ')', 'local_fullscreen/button');
@@ -88,7 +89,7 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
             if (fullscreen == true) {
                 $('body').addClass(CLASSES.toggle);
             }
-            Templates.render(TEMPLATES.button, []).then(addButton);
+            return Templates.render(TEMPLATES.button, []).then(addButton);
         };
 
         /**
