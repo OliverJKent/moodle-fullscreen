@@ -23,5 +23,10 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die;
+
+$string['fullscreenoff'] = 'Full screen mode disabled';
+$string['fullscreenon'] = 'Full screen mode enabled';
 $string['togglefullscreenmode'] = 'Toggle fullscreen content mode.  (Ctrl + Alt + b)';
 $string['pluginname'] = 'Fullscreen toggle button';
+$string['privacy:metadata:preference:fullscreenmode'] = 'Stores if the user has full screen mode active.';
