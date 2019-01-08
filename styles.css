@@ -75,9 +75,6 @@
     body .fullscreenmode {
         height: inherit;
     }
-    .fullscreenmode #page {
-        margin-bottom: 60px;
-    }
     .fullscreenmode .pull-right[class*="span"],
     .fullscreenmode .row-fluid .pull-right[class*="span"] {
         float: none;
@@ -85,9 +82,6 @@
     }
     .fullscreenmode .push {
         display: none;
-    }
-    .fullscreenmode #region-main {
-        margin-bottom: 20px;
     }
     .fullscreenmode .row-fluid .span9,
     .fullscreenmode .row-fluid .span8 {
