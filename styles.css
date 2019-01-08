@@ -94,7 +94,7 @@
         width: 100%;
     }
     .fullscreenmode .container-fluid {
-        width: 97.5%;
+        min-width: 97.5%;
     }
 
     .fullscreenmode .empty-region-side-post.used-region-side-pre #region-main,
@@ -120,7 +120,7 @@
     }
 
     .fullscreenmode.has_dock.has_dock_left_vertical #region-main {
-        width: 97.5%;
+        min-width: 97.5%;
     }
 
     /* Expand the content area in full screen mode */
@@ -143,30 +143,30 @@
 
 @media (min-width: 2000px) {
     .fullscreenmode .container-fluid {
-        width: 98%;
+        min-width: 98%;
     }
 }
 
 @media (max-width: 1597px) {
     .fullscreenmode .container-fluid {
-        width: 97%;
+        min-width: 97%;
     }
 }
 
 @media (max-width: 1333px) {
     .fullscreenmode .container-fluid {
-        width: 96%;
+        min-width: 96%;
     }
 }
 
 @media (max-width: 1005px) {
     .fullscreenmode .container-fluid {
-        width: 95%;
+        min-width: 95%;
     }
 }
 
 @media (max-width: 807px) {
     .fullscreenmode .container-fluid {
-        width: 94%;
+        min-width: 94%;
     }
 }
