@@ -40,7 +40,8 @@ function local_fullscreen_before_footer() {
             || $PAGE->pagelayout === 'popup'
             || $PAGE->pagelayout === 'redirect'
             || $PAGE->pagelayout === 'frametop'
-            || $PAGE->pagelayout === 'maintenance') {
+            || $PAGE->pagelayout === 'maintenance'
+            || $PAGE->pagelayout === 'mydashboard') {
         return;
     }
     $fullscreen = get_user_preferences('fullscreenmode', false);
