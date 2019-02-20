@@ -26,7 +26,7 @@ define(['jquery', 'core/log', 'core/templates', 'core/ajax', 'core/notification'
     function($, log, Templates, Ajax, Notification) {
         var SELECTORS = {
             /** The attachment point for Boost themes. */
-            attachBoost: '#region-main > .card-block',
+            attachBoost: "#page-header .card-body",
             /** The attachment point for Clean themes. */
             attachClean: '#region-main',
             /** The class of the fullscreen button. */
